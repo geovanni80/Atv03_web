@@ -1,0 +1,28 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.produto{
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.imagem_produto{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,26 @@
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.produto{
+    position: relative;
+}
+
+.produto:hover{
+    animation-name: subir;
+    animation-duration: 0.4s;
+}
+
+@keyframes subir{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: -5px;
+    }
+    100%{
+        top: 0;
+    }
+}
