@@ -56,7 +56,9 @@ a:hover{
 
 .produto:hover{
     animation-name: subir;
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .imagem_produto{
@@ -66,17 +68,8 @@ a:hover{
 }
 
 @keyframes subir{
-    0%{
-        top: 0;
-    }
-
-    50%{
-        top: -5px;
-    }
-
-    100%{
-        top: 0;
-    }
+    0%{ top: 0; }
+    100%{ top: -8px; }
 }
 
 @media (max-width: 900px){
