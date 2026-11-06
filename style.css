@@ -12,11 +12,17 @@ header{
 nav{
     background-color: #05420E;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 main{
     padding: 15px;
     background-color: #51A85E;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
 }
 
 footer{
@@ -36,15 +42,51 @@ a:hover{
 }
 
 .produto{
-    margin: 12px;
+    margin: 0;
+    min-width: 0;
     padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: 2px solid black;
+    position: relative;
+}
+
+.produto:hover{
+    animation-name: subir;
+    animation-duration: 0.4s;
 }
 
 .imagem_produto{
     height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@keyframes subir{
+    0%{
+        top: 0;
+    }
+
+    50%{
+        top: -5px;
+    }
+
+    100%{
+        top: 0;
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    main{
+        grid-template-columns: 1fr;
+    }
 }
