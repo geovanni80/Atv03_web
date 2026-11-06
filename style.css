@@ -1,6 +1,10 @@
 body{
     margin: 0;
     color: #E0FFE5;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -17,7 +21,12 @@ nav{
     z-index: 1;
 }
 
+nav a{
+    margin-right: 16px;
+}
+
 main{
+    flex: 1;
     padding: 15px;
     background-color: #51A85E;
     display: grid;
@@ -65,6 +74,27 @@ a:hover{
     height: 250px;
     max-width: 100%;
     object-fit: contain;
+}
+
+
+.pagina_produto{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.imagem_detalhe{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.info_produto{
+    flex: 1 1 280px;
+    max-width: 400px;
 }
 
 @keyframes subir{
